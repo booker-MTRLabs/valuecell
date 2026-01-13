@@ -34,6 +34,7 @@ class NewsAgent(BaseAgent):
             model=create_model_for_agent("news_agent"),
             tools=available_tools,
             instructions=NEWS_AGENT_INSTRUCTIONS,
+            add_datetime_to_context=True,
         )
 
         logger.info("NewsAgent initialized with news tools")

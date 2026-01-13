@@ -268,7 +268,7 @@ async def web_search(query: str) -> str:
     # Perplexity models are optimized for web search and real-time information
     model = create_model_with_provider(
         provider="openrouter",
-        model_id="perplexity/sonar",
+        model_id="perplexity/sonar-deep-research",
         max_tokens=None,
     )
     response = await Agent(model=model).arun(query)

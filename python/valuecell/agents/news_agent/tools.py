@@ -32,9 +32,14 @@ async def web_search(query: str) -> str:
 
     # Use Perplexity Sonar via OpenRouter for web search
     # Perplexity models are optimized for web search and real-time information
+    # Ensure current date context is included in query if not present
+    today = datetime.now().strftime("%Y-%m-%d")
+    if today not in query and "20" not in query:  # Simple check for year
+        query = f"{query} {today}"
+        
     model = create_model(
         provider="openrouter",
-        model_id="perplexity/sonar",
+        model_id="perplexity/sonar-deep-research",
         max_tokens=None,
     )
     response = await Agent(model=model).arun(query)
@@ -70,8 +75,9 @@ async def get_breaking_news() -> str:
         Formatted string containing breaking news
     """
     try:
-        search_query = "breaking news urgent updates today"
-        logger.info("Fetching breaking news")
+        today = datetime.now().strftime("%Y-%m-%d")
+        search_query = f"breaking news urgent updates {today}"
+        logger.info(f"Fetching breaking news for {today}")
 
         news_content = await web_search(search_query)
         return news_content
