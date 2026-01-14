@@ -11,6 +11,7 @@ import {
   NewPushAgentPng,
   PeterLynchPng,
   PhilFisherPng,
+  PolymarketAgentPng,
   PortfolioManagerPng,
   RakeshJhunjhunwalaPng,
   ResearchAgentPng,
@@ -95,6 +96,7 @@ export const AGENT_AVATAR_MAP: Record<string, string> = {
   TradingAgents: PortfolioManagerPng,
   SECAgent: SecAgentPng,
   NewsAgent: NewPushAgentPng,
+  PolymarketAgent: PolymarketAgentPng,
 };
 
 export const VALUECELL_AGENT: AgentInfo = {

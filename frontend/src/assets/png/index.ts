@@ -11,6 +11,7 @@ export { default as NewPushAgentPng } from "./agents/NewPushAgent.png";
 export { default as PeterLynchPng } from "./agents/PeterLynch.png";
 export { default as PhilFisherPng } from "./agents/PhilFisher.png";
 export { default as PortfolioManagerPng } from "./agents/PortfolioManager.png";
+export { default as PolymarketAgentPng } from "./agents/PolymarketAgent.png";
 export { default as RakeshJhunjhunwalaPng } from "./agents/RakeshJhunjhunwala.png";
 export { default as ResearchAgentPng } from "./agents/ResearchAgent.png";
 export { default as RiskManagerPng } from "./agents/RiskManager.png";
